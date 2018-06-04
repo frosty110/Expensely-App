@@ -16,7 +16,7 @@ module.exports = (env) =>{
     return {
         entry: './src/app.js', /// tell webpack where it should build its internal dependency graph
         output: {
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public','dist'),
             filename: 'bundle.js'
         },
         module: {
@@ -53,7 +53,8 @@ module.exports = (env) =>{
         devtool: isProduction ? 'source-map' : 'inline-source-map',//cheap-module-eval-source-map', // helps with debugging. It'll show the source app line number and not the babel output file line number
         devServer: {
             contentBase: path.join(__dirname, 'public'),
-            historyApiFallback: true
+            historyApiFallback: true,
+            publicPath: '/dist/'
         }
     };
 };
