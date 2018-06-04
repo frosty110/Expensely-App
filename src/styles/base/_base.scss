@@ -1,0 +1,24 @@
+html {
+    font-size: 62.5%; 
+    // this will bring rems to a base 10 scale which is easier to do math in our head
+    // 16 (pixel) / 10 = 62.5
+}
+
+body {
+    font-family: "Segoe UI",Helvetica, Arial, sans-serif;
+    font-size:$m-size;
+    
+    background: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled{
+    cursor: default;
+}
+
+.is-active{
+    font-weight: bold;
+}
