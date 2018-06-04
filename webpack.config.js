@@ -1,5 +1,6 @@
 // entry -> output
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // node. expose this object to another file. 
 // Webpack is going to run it and will have access to whatever we put in this object.
@@ -10,7 +11,8 @@ const path = require('path');
 module.exports = (env) =>{
 
     const isProduction = env === 'production';
-    console.log(env);
+    const CSSExtract = new ExtractTextPlugin('styles.css');
+
     return {
         entry: './src/app.js', /// tell webpack where it should build its internal dependency graph
         output: {
@@ -26,15 +28,29 @@ module.exports = (env) =>{
                 },
                 {
                     test: /\.s?css$/,
-                    use: [ // use allows us to use an array of loaders
-                        'style-loader',
-                        'css-loader',
-                        'sass-loader' // similar to babel. converts .scss into .css files for the browser to read
-                    ]
+                    use: CSSExtract.extract({
+                        use: [
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    sourceMap: true
+                                }
+                            },
+                            {
+                                loader: 'sass-loader',
+                                options: {
+                                    sourceMap: true
+                                }
+                            }
+                        ]
+                    })
                 }
             ]
         },
-        devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map', // helps with debugging. It'll show the source app line number and not the babel output file line number
+        plugins: [
+            CSSExtract
+        ],
+        devtool: isProduction ? 'source-map' : 'inline-source-map',//cheap-module-eval-source-map', // helps with debugging. It'll show the source app line number and not the babel output file line number
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true
