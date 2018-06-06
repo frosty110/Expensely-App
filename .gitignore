@@ -3,3 +3,8 @@
 .vscode/
 
 public/dist/
+
+.env.development
+.env.test
+
+yarn-error.log
