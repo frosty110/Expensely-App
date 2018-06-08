@@ -100,7 +100,7 @@ exports[`should call onSubmit prop for valid form submission 1`] = `
       value="rent for may"
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -206,7 +206,7 @@ exports[`should call onSubmit prop for valid form submission 2`] = `
       value="rent for may"
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -312,7 +312,7 @@ exports[`should not set amount if invalid input 1`] = `
       value=""
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -418,7 +418,7 @@ exports[`should render ExpenseForm correctly 1`] = `
       value=""
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -524,7 +524,7 @@ exports[`should render ExpenseForm with expense data 1`] = `
       value="rent for may"
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -630,7 +630,7 @@ exports[`should render error for invalid form submission 1`] = `
       value=""
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -739,7 +739,7 @@ exports[`should render error for invalid form submission 2`] = `
       value=""
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -845,7 +845,7 @@ exports[`should set amount if valid input 1`] = `
       value=""
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -951,7 +951,7 @@ exports[`should set description on input change 1`] = `
       value=""
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
@@ -1057,7 +1057,7 @@ exports[`should set textarea on input change 1`] = `
       value="testArea description!"
     />
     <button>
-      Add Expense
+      Save Expense
     </button>
   </form>
 </div>
