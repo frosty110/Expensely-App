@@ -6,7 +6,10 @@ export default (state = expensesReducerDefaultState, action) => {
         case 'ADD_EXPENSE':
             // Array Spread operator. Makes it easy to concat values into an array and get a new array 
             // * doesn't affect the old array which is what we WANT
-            return [...state, action.expense];
+            return [
+                ...state,
+                action.expense
+            ];
         case 'REMOVE_EXPENSE':
             return state.filter( ({id}) => action.id !== id);
         case 'EDIT_EXPENSE':
