@@ -36,8 +36,6 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        console.log('uid', user.uid);
-        console.log('log in');
         store.dispatch(login(user.uid));
         store.dispatch(startSetExpenses()).then(() => {
             renderApp();
@@ -49,7 +47,6 @@ firebase.auth().onAuthStateChanged((user) => {
 
     } else {
         store.dispatch(logout());
-        console.log('log out');
         renderApp();
         // redirect to homescreen
         history.push('/');
