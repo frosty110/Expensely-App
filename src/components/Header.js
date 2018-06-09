@@ -7,9 +7,9 @@ export const Header = ({startLogout}) => (
     <header>
         <h1>Expense-Ly</h1>
         <h4>Manage your expenses</h4>
-        <NavLink to="/dashboard" activeClassName="is-active" exact={true}>Dashboard</NavLink>
-        <NavLink to="/create" activeClassName="is-active">Create Expense</NavLink>
-        <NavLink to="/help" activeClassName="is-active">Help</NavLink>
+        <NavLink to="/dashboard" activeClassName="is-active" activeStyle={{color: "red"}} >Dashboard</NavLink>
+        <NavLink to="/create" activeClassName="is-active" activeStyle={{color: "red"}} >Create Expense</NavLink>
+        <NavLink to="/help" activeClassName="is-active" activeStyle={{color: "red"}} >Help</NavLink>
         <button onClick={startLogout}>Logout</button>
 
     </header>

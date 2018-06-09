@@ -10,14 +10,23 @@ exports[`should render Header correctly 1`] = `
   </h4>
   <NavLink
     activeClassName="is-active"
+    activeStyle={
+      Object {
+        "color": "red",
+      }
+    }
     ariaCurrent="true"
-    exact={true}
     to="/dashboard"
   >
     Dashboard
   </NavLink>
   <NavLink
     activeClassName="is-active"
+    activeStyle={
+      Object {
+        "color": "red",
+      }
+    }
     ariaCurrent="true"
     to="/create"
   >
@@ -25,6 +34,11 @@ exports[`should render Header correctly 1`] = `
   </NavLink>
   <NavLink
     activeClassName="is-active"
+    activeStyle={
+      Object {
+        "color": "red",
+      }
+    }
     ariaCurrent="true"
     to="/help"
   >
