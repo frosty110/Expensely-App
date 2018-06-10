@@ -1,5 +1,6 @@
 .form {
     display: flex;
+    padding-bottom: 5rem;
     flex-direction: column;
     >* {
       margin-bottom: $m-size;
