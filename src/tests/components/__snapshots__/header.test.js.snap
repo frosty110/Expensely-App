@@ -1,53 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header>
-  <h1>
-    Expense-Ly
-  </h1>
-  <h4>
-    Manage your expenses
-  </h4>
-  <NavLink
-    activeClassName="is-active"
-    activeStyle={
-      Object {
-        "color": "red",
-      }
-    }
-    ariaCurrent="true"
-    to="/dashboard"
+<header
+  className="header"
+>
+  <div
+    className="header-container"
   >
-    Dashboard
-  </NavLink>
-  <NavLink
-    activeClassName="is-active"
-    activeStyle={
-      Object {
-        "color": "red",
-      }
-    }
-    ariaCurrent="true"
-    to="/create"
+    <div
+      className="content-container"
+    >
+      <h1>
+        Expense-Ly
+      </h1>
+    </div>
+  </div>
+  <div
+    className="nav-toolbox-separator"
   >
-    Create Expense
-  </NavLink>
-  <NavLink
-    activeClassName="is-active"
-    activeStyle={
-      Object {
-        "color": "red",
-      }
-    }
-    ariaCurrent="true"
-    to="/help"
-  >
-    Help
-  </NavLink>
-  <button
-    onClick={[Function]}
-  >
-    Logout
-  </button>
+    <div
+      className="content-container"
+    >
+      <div
+        className="nav-container"
+      >
+        <div
+          className="nav-links"
+        >
+          <NavLink
+            activeClassName="is-active"
+            ariaCurrent="true"
+            className="nav-item"
+            to="/dashboard"
+          >
+            Dashboard
+          </NavLink>
+          <NavLink
+            activeClassName="is-active"
+            ariaCurrent="true"
+            className="nav-item"
+            to="/help"
+          >
+            Help
+          </NavLink>
+        </div>
+        <div
+          className="nav-logout"
+        >
+          <button
+            className="nav-item"
+            onClick={[Function]}
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 `;

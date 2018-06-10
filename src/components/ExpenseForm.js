@@ -56,22 +56,28 @@ class ExpenseForm extends React.Component {
     };
     render () {
         return (
-            <div>
+            <div className="content-container">
+                
                 {this.state.errorMessage && <p>{this.state.errorMessage}</p>}
-                <form onSubmit={this.onSubmit}>
+                <form className="form" onSubmit={this.onSubmit}>
+                    <span>Description</span>
                     <input
                         type="text"
                         placeholder="Description"
                         autoFocus
+                        className="text-input"
                         value={this.state.description}
                         onChange={this.onDescriptionChange}
                     />
+                    <span>Amount</span>
                     <input
                         type="text"
                         placeholder="Amount"
+                        className="text-input"
                         value={this.state.amount}
                         onChange={this.onAmountChange}
                     />
+                    <span>Date</span>
                     <SingleDatePicker
                         date={this.state.createdAt}
                         onDateChange={this.onDateChange}
@@ -80,13 +86,17 @@ class ExpenseForm extends React.Component {
                         numberOfMonths={1}
                         isOutsideRange={() => false}
                     />
+                    <span>Note</span>
                     <textarea
-                        placeholder="Add a note for your expenses (optional)"
+                        placeholder="Add a note for your expense (optional)"
+                        className="textarea"
                         value={this.state.note}
                         onChange = {this.onNoteChange}
                     >
                     </textarea>
-                    <button>Save Expense</button>
+                    <div>
+                        <button className="button">Save Expense</button>
+                    </div>
                 </form>
             </div>
         )
