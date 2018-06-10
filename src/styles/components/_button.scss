@@ -8,10 +8,23 @@
     display: inline-block;
     text-decoration: none;
     line-height: 1;
+    transition: background .3s ease;
+    &:hover {
+        color: white;
+        background: #142c58;
+    }
 }
 
-.button:hover {
-    color: white;
-    background: #142c58;
-
+.nav-item{
+    text-decoration: none;
+    border: none;
+    font-size: $font-size-large;
+    font-weight: 400;
+    background: none; //#fcfcfc;
+    color: black;
+    transition: background .3s ease;
+    &:hover {
+        background:  #1c88bf;
+        color: white;
+    }
 }

@@ -1,5 +1,6 @@
 .list-header {
-    background: $off-white;
+    
+    background: #e8e8e8;
     border: 1px solid darken($off-white, 7%);
     color: $grey;
     display: flex;
@@ -16,6 +17,7 @@
   
   .list-item {
     border: 1px solid darken($off-white, 7%);
+    background: white;
     border-top: none;
     color: $dark-grey;
     display: flex;
@@ -24,7 +26,7 @@
     text-decoration: none;
     transition: background .3s ease;
     &:hover {
-      background: $off-white;
+      background: #d1f7d5;
     }
     @media (min-width: $desktop-breakpoint) {
       align-items: center;

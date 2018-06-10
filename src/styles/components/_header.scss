@@ -19,7 +19,6 @@
     align-items:center;
 }
 
-
 .nav-item{
     text-decoration: none;
     border: none;
@@ -28,11 +27,13 @@
     background: none; //#fcfcfc;
     color: black;
     padding: 20px;
+    transition: background .3s ease;
+    &:hover {
+        background:  #1c88bf;
+        color: white;
+    }
 }
-.nav-item:hover {
-    background:  #1c88bf;
-    color: white;
-}
+
 
 
 
