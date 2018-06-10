@@ -10,8 +10,8 @@ Expense-Ly is a cloud-enabled, mobile-ready, offline-storage, React powered tool
 - [x] Data is accessable in the cloud from web or mobile
 - [x] setup google autherization
 - [x] Setup private routes
-- [ ] setup public routes
-- [ ] Style the UI
+- [X] setup public routes
+- [X] Style the UI
 - [ ] Create better dashboard summary
 - [ ] Allow import/export of data to csv
 
