@@ -7,13 +7,17 @@ Expense-Ly is a cloud-enabled, mobile-ready, offline-storage, React powered tool
 - [x] Create/Edit/Delete expenses to Firebase (NoSQL database)
 - [x] Filter expenses by text or date range
 - [x] Basic summary report from filtered expenses
-- [x] Data is accessable in the cloud from web or mobile
-- [x] setup google autherization
-- [x] Setup private routes
-- [X] setup public routes
-- [X] Style the UI
-- [ ] Create better dashboard summary
+- [x] Data is accessable from the cloud
+- [x] Login through google autherization and privatize data to user
+- [x] Setup private/public routes for better navigating
+- [X] Stylize the UI
+- [ ] Support importing and exporting of data (csv/json)
+- [ ] Support custom
+- [ ] Create a visualization dashboard summary of expenses
+- [ ] 
 - [ ] Allow import/export of data to csv
+- [ ] Add confirmation modal when deleting expenses
+- [ ] Add email / facebook / github / twitter login
 
 ### For Local Run (requires Firebase):
 
