@@ -10,7 +10,11 @@
 
 .input-group__item {
     margin-bottom: $s-size;
+    display: flex;
+    flex-flow: column;
+    line-height:2em;
     @media (min-width: $desktop-breakpoint) {
         margin: 0 $s-size 0 0;
     }
 }
+

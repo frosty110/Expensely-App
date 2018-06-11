@@ -8,6 +8,7 @@
     display: inline-block;
     text-decoration: none;
     line-height: 1;
+    box-shadow: 0px 4px 10px 0px rgba(8, 13, 18, 0.5);
     transition: background .3s ease;
     &:hover {
         color: white;
@@ -15,16 +16,4 @@
     }
 }
 
-.nav-item{
-    text-decoration: none;
-    border: none;
-    font-size: $font-size-large;
-    font-weight: 400;
-    background: none; //#fcfcfc;
-    color: black;
-    transition: background .3s ease;
-    &:hover {
-        background:  #1c88bf;
-        color: white;
-    }
-}
+

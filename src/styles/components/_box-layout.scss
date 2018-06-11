@@ -9,16 +9,18 @@
 }
 
 .box-layout__box {
-    background: fade-out(white, .15);
-    border-radius: 3px;
-    padding: $m-size;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 10%;
+    padding: 3em .5em;
+    color: #dff9ff;
     text-align: center;
     width: 25rem;
-    box-shadow:5px;
+    background-image: linear-gradient(0.4turn, rgba(0, 0, 0, 0.5490196078431373) 10%, rgb(0, 0, 0));
+    box-shadow: 1px 1px 100px 5px #000000;
+    text-shadow: -1px 4px 15px black;
 }
 
 .box-layout__title {
     margin: 0 0 $m-size 0;
     line-height: 1;
 }
-
