@@ -1,8 +1,9 @@
 import React from 'react';
 import moment from 'moment';
+import {connect} from 'react-redux';
 import {SingleDatePicker} from 'react-dates';
 
-class ExpenseForm extends React.Component {
+export class ExpenseForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -39,6 +40,10 @@ class ExpenseForm extends React.Component {
         this.setState(() => ({calendarFocused: focused}));
     };
 
+    componentDidCatch(error, info) {
+        console.log('Error occured:',error, info);
+    }
+
     onSubmit = (e) => {
         e.preventDefault();
         if (!this.state.description || !this.state.amount){
@@ -54,6 +59,13 @@ class ExpenseForm extends React.Component {
             });
         }
     };
+
+    onRemove = (e) =>{
+        this.props.onRemove({
+            id: this.props.id
+        })
+    };
+
     render () {
         return (
             <div className="content-container">
@@ -94,8 +106,10 @@ class ExpenseForm extends React.Component {
                         onChange = {this.onNoteChange}
                     >
                     </textarea>
-                    <div>
-                        <button className="button">Save Expense</button>
+                    <div className="button-bar-Container">
+                        <button type="submit" className="button">Save Expense</button>
+                        {!!this.props.onRemove && <button type="button" className="button" onClick={this.onRemove}>Remove</button>}
+                        <button type="button" className="button" onClick={this.props.onCancel}>Cancel</button>
                     </div>
                 </form>
             </div>
@@ -104,3 +118,17 @@ class ExpenseForm extends React.Component {
 }
 
 export default ExpenseForm;
+
+
+// const mapStateToProps = (state, props) => {
+//     return{
+//         expense: state.expenses.find((expense) => expense.id === props.match.params.id)
+//     };
+// };
+
+// const mapDispatchToProps = (dispatch, props) => {
+//     return {
+//         startRemoveExpense: (id) => dispatch(startRemoveExpense(id))
+//     };
+// };
+// export default connect(undefined, mapDispatchToProps)(ExpenseForm);
