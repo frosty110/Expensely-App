@@ -1,8 +1,8 @@
 import React from 'react';
 
 const HelpPage = () => (
-    <div>
-        <h3>Help Page</h3>
+    <div className="content-container">
+        <h1>Help Page</h1>
         
         <ul>How was this built?</ul>
         <ul>What's next?</ul>

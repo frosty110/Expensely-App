@@ -32,8 +32,6 @@ const renderApp = () => {
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
 
-
-
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         store.dispatch(login(user.uid));
@@ -49,6 +47,6 @@ firebase.auth().onAuthStateChanged((user) => {
         store.dispatch(logout());
         renderApp();
         // redirect to homescreen
-        history.push('/');
+        // history.push('/');
     }
 });

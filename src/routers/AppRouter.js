@@ -8,6 +8,11 @@ import HelpPage from '../components/HelpPage';
 import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 import LoginPage from '../components/LoginPage';
+
+import SignUpPage from '../components/SignUpPage';
+import AccountPage from '../components/AccountSettingPage';
+import PasswordForgetPage from '../components/PasswordForgetPage';
+import ManageGoalsPage from '../components/ManageGoalsPage';
 // import WelcomePage from '../components/WelcomePage';
 
 import PrivateRoute from './PrivateRoute';
@@ -20,12 +25,20 @@ const AppRouter = () => (
     <Router history={history}>
         <div>
             <Switch>   
-                {/* <Route path="/" component={ExpenseDashBoardPage} exact={true} /> */}
+                
                 <PublicRoute path="/" component={LoginPage} exact={true} />
+                <PublicRoute path="/login" component={LoginPage} exact={true} />
+                <PublicRoute path="/signup" component={SignUpPage}/>
+                <PublicRoute path="/forgotpassword" component={PasswordForgetPage} />
+
                 <PrivateRoute path="/dashboard" component={ExpenseDashBoardPage} />
+                <PrivateRoute path="/managegoals" component={ManageGoalsPage} />
+                
                 <PrivateRoute path="/create" component={AddExpensePage} />
                 <PrivateRoute path="/edit/:id" component={EditExpensePage} />
+                
                 <PrivateRoute path="/help" component={HelpPage} />
+                <PrivateRoute path="/settings" component={AccountPage}/>
                 <Route component={NotFoundPage} />
             </Switch>
         </div>
