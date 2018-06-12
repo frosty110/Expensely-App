@@ -14,6 +14,27 @@
         color: white;
         background: #142c58;
     }
+    &:disabled{
+        background: #dddddd;
+        &:hover {
+            background: #dddddd;
+        }
+    }
 }
 
+.button-bar-Container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @media (min-width: $desktop-breakpoint) {
+        flex-direction: row;
+    }
+}
+
+.button-bar-Container .button{
+    margin-top:15px;
+    @media (min-width: $desktop-breakpoint) {
+        margin-top:0px;
+    }
+}
 

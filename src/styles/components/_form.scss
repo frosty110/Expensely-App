@@ -1,6 +1,6 @@
 .form {
     display: flex;
-    padding-bottom: 5rem;
+    // padding-bottom: 5rem; // removed for form on loging box
     flex-direction: column;
     >* {
       margin-bottom: $m-size;
